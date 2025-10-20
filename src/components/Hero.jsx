@@ -1,12 +1,6 @@
 import styles from './Hero.module.css';
 
-const Hero = () => {
-
-    const handleExploreClick = () => {
-
-        window.scrollTo({top: window.innerHeight,
-        behavior: 'smooth'});
-    };
+const Hero = ( {onExploreClick} ) => {
 
     return (
 
@@ -30,7 +24,7 @@ const Hero = () => {
                     Discover the hidden gem of Turkey where tradition meets modernity
                 </p>
 
-                <button className={styles.ctaButton} onClick = {handleExploreClick}>
+                <button className={styles.ctaButton} onClick = {onExploreClick}>
                     Explore Now
 
                 </button>

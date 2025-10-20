@@ -1,0 +1,124 @@
+.collageContainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 148px 24px;
+    background: linear-gradient(to bottom, #fafafa, rgba(19, 96, 126, 0.5));
+}
+
+.header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 2rem auto 3rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.collageWrapper {
+    display: flex;
+    gap: 16px;
+    height: 500px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.panel {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.6s ease;
+    flex: 1;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panelImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.panel:not(.active) .panelImage {
+    filter: brightness(0.7);
+}
+
+.panelContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.panel:not(.active) .panelContent {
+    opacity: 0;
+}
+
+.panelTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+.panelDescription {
+    font-size: 1rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+.panelLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    transition: opacity 0.3s ease;
+}
+
+.panel.active .panelLabel {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .collageWrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .panel {
+        height: 100px;
+    }
+
+    .panel.active {
+        height: 400px;
+    }
+
+    .panelLabel {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
