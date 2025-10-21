@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styles from './LandmarkCollage.module.css';
 
-import odunpazari from '../assets/images/odunpazari-evleri.jpg';
-import omm from '../assets/images/omm-museum.jpg';
-import plane from '../assets/images/plane.jpg';
-import sazova from '../assets/images/sazova-tower.jpg';
-import seyit from '../assets/images/seyit-battal-kulliye.jpg';
-import wax from '../assets/images/wax-museum.jpg';
+import odunpazari from '../../assets/images/odunpazari-evleri.jpg';
+import omm from '../../assets/images/omm-museum.jpg';
+import plane from '../../assets/images/plane.jpg';
+import sazova from '../../assets/images/sazova-tower.jpg';
+import seyit from '../../assets/images/seyit-battal-kulliye.jpg';
+import wax from '../../assets/images/wax-museum.jpg';
 
 const LandmarkCollage = React.forwardRef((props, ref) => {
 

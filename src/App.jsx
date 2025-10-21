@@ -1,9 +1,9 @@
 import Navbar from './components/layout/Navbar';
-import Hero from './components/Hero';
-import LandmarkCollage from "./components/LandmarkCollage.jsx";
-import Mapping from "./components/Mapping";
+import Hero from './components/Home/Hero.jsx';
+import LandmarkCollage from "./components/Home/LandmarkCollage.jsx";
+import Mapping from "./components/Home/Mapping.jsx";
 import React, { useRef, useCallback } from "react";
-import WikipediaAbout from "./components/WikipediaAbout";
+import WikipediaAbout from "./components/Home/WikipediaAbout.jsx";
 
 
 const App = () => {
