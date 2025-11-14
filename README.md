@@ -220,3 +220,5 @@ This project was created for educational purposes.
 ---
 
 Enjoy exploring Eskişehir!
+
+![Logo](./public/visit-eskisehir.svg)
