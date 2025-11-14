@@ -1,0 +1,162 @@
+/* CurrencyConverter.module.css */
+
+/* --- Layout Container --- */
+.converterSection {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- Converter Card --- */
+.converterCard {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border-light);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(35, 35, 35, 0.2);
+    width: 90%;
+    max-width: 750px;
+    text-align: center;
+    min-height: 200px;
+    /* Ensures dark text is the default for all children */
+    color: var(--color-text);
+}
+
+.converterTitle {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.rateInfo {
+    font-size: 1rem;
+    color: var(--color-subtle);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* --- Loading and Error States (Reusing existing colors) --- */
+.loadingText {
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+.errorText {
+    color: #e53935;
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+/* --- Input Container --- */
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 2rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.inputLabel {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.6rem;
+}
+
+/* --- Input & Select Shared Styles --- */
+.currencyInput,
+.currencySelect {
+    padding: 0.9rem 1rem;
+    border: 2px solid var(--color-border-light);
+    border-radius: 10px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--color-card-bg);
+    cursor: pointer;
+
+    /* Ensure text color is dark and visible */
+    color: var(--color-text);
+
+    opacity: 1;
+
+    /* Default appearance management */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Custom SVG Arrow for the drop-down */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230894D2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+/* FIX: Targeting option tags for absolute visibility inside the dropdown */
+.currencySelect option {
+    /* Set background to white/card-bg and text to dark to override OS themes */
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+}
+
+/* Specific Select Styling */
+.currencySelect {
+    padding-right: 2.5rem;
+}
+
+.currencyInput:focus,
+.currencySelect:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(8, 148, 210, 0.3);
+}
+
+/* --- Conversion Result (CRITICAL FIX: Ensuring Result Text is Dark) --- */
+.conversionResult {
+    padding: 1.8rem;
+    background: #1699a2;
+    border-radius: 12px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15px;
+    border: 2px dashed var(--color-primary);
+    margin-top: 3rem;
+}
+
+.resultAmount {
+    font-size: 3rem;
+    font-weight: 900;
+    /* FIX: Ensure this is NOT white, but dark blue */
+    color: var(--color-text);
+}
+
+.resultCurrency {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 650px) {
+    .inputContainer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .converterCard {
+        padding: 1.5rem;
+        max-width: 95%;
+    }
+}

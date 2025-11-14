@@ -8,6 +8,8 @@ import WikipediaAbout from "../Home/WikipediaAbout.jsx";
 import Weather from "../Weather/Weather.jsx";
 import Button from "../common/Button.jsx";
 import {useCallback, useRef} from "react";
+import IntroHotels from "../Home/IntroHotels.jsx";
+import CurrencyConverter from "../Home/CurrencyConverter.jsx";
 
 const Home = () => {
 
@@ -30,7 +32,9 @@ const Home = () => {
             <LandmarkCollage ref = {landmarkCollageRef}/>
             <Mapping />
             <WikipediaAbout topic = "Eskişehir"/>
+            <IntroHotels />
             <Weather/>
+            <CurrencyConverter />
         </>
     );
 }

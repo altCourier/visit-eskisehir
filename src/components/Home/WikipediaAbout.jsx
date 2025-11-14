@@ -18,10 +18,10 @@ const WikipediaAbout = ({ topic }) => {
             const params = {
                 action: 'query',
                 format: 'json',
-                prop: 'extracts',
+                prop: 'extracts|pageimages',
                 exintro: true,
                 explaintext: true,
-                piprop: 'thumbnail|original',
+                pithumbsize: 500, // Request a reasonably sized thumbnail
                 redirects: 1,
                 titles: topic,
                 origin: '*',
@@ -68,6 +68,11 @@ const WikipediaAbout = ({ topic }) => {
 
     const handleNavigate = () => {
         window.location.hash = 'about';
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant'
+        });
     };
 
     return (

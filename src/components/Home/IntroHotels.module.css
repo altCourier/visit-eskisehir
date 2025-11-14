@@ -1,0 +1,45 @@
+/* IntroHotels.module.css (Example Styles) */
+.introHotelsSection {
+    background-color: var(--color-primary); /* Use your primary blue color */
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    margin: 3rem 0; /* Add vertical spacing */
+    border-radius: 12px;
+}
+
+.contentWrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.ctaButton {
+    /* Reuse existing button styling structure for consistency */
+    background: var(--color-accent); /* Use a bright color for the CTA */
+    color: var(--color-text); /* Use the deep blue text color for contrast */
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(0, 232, 255, 0.4); /* Accent shadow */
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 232, 255, 0.6);
+}
