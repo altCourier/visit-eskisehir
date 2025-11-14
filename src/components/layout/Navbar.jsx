@@ -25,14 +25,17 @@ const Navbar = () => {
     return (
         <nav className = {`${styles.navbar} ${isVisible ? styles.navbarVisible : ''}`}>
 
-            <a href="google.com" className={styles.siteTitle}> Visit Eskişehir </a>
+            <a href="#home" className={styles.siteTitle}> Visit Eskişehir </a>
 
             <ul>
                 <li>
-                    <a href="/hotels" className={styles.navLink}> Hotels </a>
+                    <a href="#hotels" className={styles.navLink}> Hotels </a>
                 </li>
                 <li>
-                    <a href="/about" className={styles.navLink}> About </a>
+                    <a href="#about" className={styles.navLink}> About </a>
+                </li>
+                <li>
+                    <a href="#weather-details" className={styles.navLink}> Weather </a>
                 </li>
             </ul>
 
@@ -41,3 +44,4 @@ const Navbar = () => {
 }
 
 export default Navbar;
+

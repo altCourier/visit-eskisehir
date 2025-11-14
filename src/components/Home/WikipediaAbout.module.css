@@ -11,7 +11,36 @@
 
 .container {
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 10px auto;
+    padding: 0 24px;
+}
+
+.customButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #0ed2b4 0%, rgba(118, 75, 162, 0.54) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(8, 148, 210, 0.32);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.customButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgb(0, 232, 255);
+}
+
+
+.buttonContainer {
+    margin: 3rem;
+    padding: 24px 24px;
 }
 
 .sectionTitle {

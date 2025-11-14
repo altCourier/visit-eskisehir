@@ -1,0 +1,365 @@
+.aboutPage {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 80px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mainTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.sectionCard {
+    background: white;
+    border-radius: 16px;
+    padding: 48px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.sectionCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+    border-bottom: 4px solid #105c64;
+    padding-bottom: 12px;
+    display: inline-block;
+}
+
+.sectionDescription {
+    font-size: 1.25rem;
+    color: #6b7280;
+    font-style: italic;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.cardContent {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.imageContainer {
+    flex: 0 0 400px;
+    min-width: 0;
+}
+
+.sectionImage {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+.textContent {
+    flex: 1;
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+.paragraph {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #105c64, transparent);
+    margin: 60px 0;
+}
+
+.highlightSection {
+    margin: 60px 0;
+}
+
+.highlightBanner {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    color: white;
+    padding: 48px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(15, 52, 96, 0.3);
+}
+
+.highlightTitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.highlightText {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+.timeline {
+    background: white;
+    border-radius: 16px;
+    padding: 48px;
+    margin-top: 60px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.timelineTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 4px solid #0ed2b4;
+    padding-bottom: 16px;
+    display: inline-block;
+    width: 100%;
+}
+
+.timelineContent {
+    position: relative;
+    padding-left: 40px;
+}
+
+.timelineContent::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #0ed2b4, #16213e);
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 32px;
+}
+
+.timelineItem::before {
+    content: '';
+    position: absolute;
+    left: -42px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #0ed2b4;
+    border: 4px solid white;
+    box-shadow: 0 0 0 2px #0ed2b4;
+}
+
+.timelineYear {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #16213e;
+    margin-bottom: 8px;
+}
+
+.timelineDescription {
+    font-size: 1.125rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #6b7280;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #e5e7eb;
+    border-top-color: #0ed2b4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.error {
+    padding: 24px;
+    background-color: #fee2e2;
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.footer {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid #e5e7eb;
+    text-align: center;
+}
+
+.footerText {
+    font-size: 1rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mainTitle {
+        font-size: 2.75rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+
+    .cardContent {
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 60px 20px;
+    }
+
+    .mainTitle {
+        font-size: 2.25rem;
+    }
+
+    .subtitle {
+        font-size: 1.125rem;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+
+    .sectionCard {
+        padding: 32px 24px;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .highlightBanner {
+        padding: 32px 24px;
+    }
+
+    .highlightTitle {
+        font-size: 1.75rem;
+    }
+
+    .highlightText {
+        font-size: 1.125rem;
+    }
+
+    .timeline {
+        padding: 32px 24px;
+    }
+
+    .timelineTitle {
+        font-size: 2rem;
+    }
+
+    .timelineContent {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainTitle {
+        font-size: 1.875rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .sectionCard {
+        padding: 24px 16px;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .textContent {
+        font-size: 1rem;
+    }
+
+    .highlightTitle {
+        font-size: 1.5rem;
+    }
+
+    .timelineYear {
+        font-size: 1.25rem;
+    }
+
+    .timelineDescription {
+        font-size: 1rem;
+    }
+}

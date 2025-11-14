@@ -1,0 +1,182 @@
+.weatherSection {
+    padding: 1rem 2rem 3rem 2rem; /* Less top padding, more bottom */
+    background: linear-gradient(to bottom, #f7f7f7 0%, #ffffff 50%, #f7f7f7 100%); /* Creates a "wave" effect */
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Left side - Weather Card */
+.weatherCard {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 1.75rem;
+    margin: 0 0 1.5rem 0;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.weatherInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.weatherItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.weatherItem:hover {
+    transform: translateX(5px);
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    margin: 0;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.value {
+    font-size: 1.5rem;
+    margin: 0.25rem 0 0 0;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Right side - Advice Section */
+.adviceSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.adviceCard {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 100%;
+}
+
+.adviceText {
+    font-size: 1.125rem;
+    color: #2d3748;
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.detailsButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #0ed2b4 0%, rgba(118, 75, 162, 0.54) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(8, 148, 210, 0.32);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.detailsButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgb(0, 232, 255);
+}
+
+.arrow {
+    font-size: 1.25rem;
+    transition: transform 0.2s;
+}
+
+.detailsButton:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Loading State */
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #0894d2;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgb(0, 232, 255);
+    border-top-color: #1699a2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .weatherSection {
+        padding: 2rem 1rem;
+    }
+
+    .weatherLayout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .weatherCard {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .value {
+        font-size: 1.25rem;
+    }
+
+    .adviceText {
+        font-size: 1rem;
+    }
+
+    .detailsButton {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,36 +1,39 @@
-import Navbar from './components/layout/Navbar';
-import Hero from './components/Home/Hero.jsx';
-import LandmarkCollage from "./components/Home/LandmarkCollage.jsx";
-import Mapping from "./components/Home/Mapping.jsx";
-import React, { useRef, useCallback } from "react";
-import WikipediaAbout from "./components/Home/WikipediaAbout.jsx";
-
+import { useState, useEffect } from 'react';
+import Home from "./components/Home/Home.jsx";
+import AboutPage from "./components/About/aboutPage.jsx";
+import Navbar from "./components/layout/Navbar.jsx";
+import WeatherDetails from "./components/Weather/WeatherDetails.jsx";
+import Hotels from "./components/Hotels/Hotels.jsx";
 
 const App = () => {
-
-    const landmarkCollageRef = useRef(null);
-
-    const handleExploreClick = useCallback(
-        () => {
-
-            if (landmarkCollageRef.current) {
-                landmarkCollageRef.current.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                })
-            }
-        }, []
+    // Get initial page from URL hash (e.g., #about) or default to 'home'
+    const [currentPage, setCurrentPage] = useState(
+        window.location.hash.slice(1) || 'home'
     );
 
+    // Listen for URL hash changes
+    useEffect(() => {
+        const handleHashChange = () => {
+            setCurrentPage(window.location.hash.slice(1) || 'home');
+        };
+
+        window.addEventListener('hashchange', handleHashChange);
+
+        return () => {
+            window.removeEventListener('hashchange', handleHashChange);
+        };
+    }, []);
 
     return (
-        <>
+        <div>
+
             <Navbar />
-            <Hero onExploreClick={handleExploreClick} />
-            <LandmarkCollage ref = {landmarkCollageRef}/>
-            <Mapping />
-            <WikipediaAbout topic = "Eskişehir"/>
-        </>
+            {/* Render the appropriate page */}
+            {currentPage === 'hotels' && <Hotels />}
+            {currentPage === 'home' && <Home />}
+            {currentPage === 'about' && <AboutPage />}
+            {currentPage === 'weather-details' && <WeatherDetails />}
+        </div>
     );
 }
 

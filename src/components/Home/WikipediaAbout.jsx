@@ -66,9 +66,16 @@ const WikipediaAbout = ({ topic }) => {
         fetchWikipediaSummary();
     }, [topic]);
 
+    const handleNavigate = () => {
+        window.location.hash = 'about';
+    };
+
     return (
+
         <section className={styles.aboutSection}>
+
             <div className={styles.container}>
+
                 <h2 className={styles.sectionTitle}>
                     About {topic}
                 </h2>
@@ -113,6 +120,15 @@ const WikipediaAbout = ({ topic }) => {
                         </div>
                     </div>
                 )}
+            </div>
+
+            <div className={styles.buttonContainer}>
+                <button
+                    className={styles.customButton}
+                    onClick={handleNavigate}
+                >
+                    Explore
+                </button>
             </div>
         </section>
     );
