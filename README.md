@@ -1,5 +1,7 @@
 # Visit Eskişehir
 
+![Visit Eskişehir](./screenshots/intro.png)
+
 An interactive web application designed to 
 promote tourism in Eskişehir, Turkey. 
 This project provides visitors with essential 
@@ -21,6 +23,8 @@ detailed information about the city.
 
 ### Main Page 
 
+![Home page](./screenshots/collage.png)
+
 * **Interactive Google Maps Integration**:
 Embedded map showing Eskişehir's location
 
@@ -34,6 +38,8 @@ to Eskişehir with key highlights
 
 ### Hotels Page
 
+![Hotels Page](./screenshots/hotels.png)
+
 - Browse available hotels in Eskişehir
 - Integration with Booking.com for accommodation options
 - Detailed hotel view with image galleries
@@ -41,12 +47,16 @@ to Eskişehir with key highlights
 
 ### About Page
 
+![About Page](./screenshots/about.png)
+
 - Comprehensive information about Eskişehir
 - Wikipedia API integration for up-to-date city information
 -  Cultural and historical context
 -  Points of interest and attractions
 
 ### Weather Page
+
+![Weather Page](./screenshots/weather.png)
 
 - Current weather conditions in Eskişehir
 -  Weather forecasts using Open-Meteo API
