@@ -60,6 +60,14 @@ to Eskişehir with key highlights
 - React.js: Frontend framework
 - Vite: Build tool and development server
 
+### Third-Party Libraries
+
+- axios: HTTP client for making API requests
+- lucide-react: Modern icon library for React
+- react-router-dom: Routing library (using hash-based navigation for compatibility)
+- recharts: Charting library for data visualization
+- CSS Modules: Component-scoped styling for maintainable and conflict-free CSS
+
 ### APIs Used
 
 1. Wikipedia API (https://en.wikipedia.org/w/api.php)
